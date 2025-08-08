@@ -1,23 +1,29 @@
+import type { Votes } from "../../types/votes";
 import styles from "./VoteStatus.module.css";
+interface VoteStatusProps {
+  votes: Votes;
+  totalvotes: number;
+  positiveRate: number;
+}
 
-function VoteStatus() {
+function VoteStatus({ votes, totalvotes, positiveRate }: VoteStatusProps) {
   return (
     <>
       <div className={styles.container}>
         <p className={styles.stat}>
-          Good: <strong>0</strong>
+          Good: <strong>{votes.good}</strong>
         </p>
         <p className={styles.stat}>
-          Neutral: <strong>0</strong>
+          Neutral: <strong>{votes.neutral}</strong>
         </p>
         <p className={styles.stat}>
-          Bad: <strong>0</strong>
+          Bad: <strong>{votes.bad}</strong>
         </p>
         <p className={styles.stat}>
-          Total: <strong>0</strong>
+          Total: <strong>{totalvotes}</strong>
         </p>
         <p className={styles.stat}>
-          Positive: <strong>0%</strong>
+          Positive: <strong>{positiveRate}%</strong>
         </p>
       </div>
     </>
