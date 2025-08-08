@@ -2,11 +2,11 @@ import type { Votes } from "../../types/votes";
 import styles from "./VoteStats.module.css";
 interface VoteStatsProps {
   votes: Votes;
-  totalvotes: number;
+  totalVotes: number;
   positiveRate: number;
 }
 
-function VoteStats({ votes, totalvotes, positiveRate }: VoteStatsProps) {
+function VoteStats({ votes, totalVotes, positiveRate }: VoteStatsProps) {
   return (
     <>
       <div className={styles.container}>
@@ -20,7 +20,7 @@ function VoteStats({ votes, totalvotes, positiveRate }: VoteStatsProps) {
           Bad: <strong>{votes.bad}</strong>
         </p>
         <p className={styles.stat}>
-          Total: <strong>{totalvotes}</strong>
+          Total: <strong>{totalVotes}</strong>
         </p>
         <p className={styles.stat}>
           Positive: <strong>{positiveRate}%</strong>

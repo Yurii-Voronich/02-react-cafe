@@ -37,7 +37,7 @@ function App() {
       {totalVotes > 0 ? (
         <VoteStats
           votes={votes}
-          totalvotes={totalVotes}
+          totalVotes={totalVotes}
           positiveRate={positiveRate}
         />
       ) : (
