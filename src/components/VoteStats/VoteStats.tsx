@@ -1,12 +1,12 @@
 import type { Votes } from "../../types/votes";
-import styles from "./VoteStatus.module.css";
-interface VoteStatusProps {
+import styles from "./VoteStats.module.css";
+interface VoteStatsProps {
   votes: Votes;
   totalvotes: number;
   positiveRate: number;
 }
 
-function VoteStatus({ votes, totalvotes, positiveRate }: VoteStatusProps) {
+function VoteStats({ votes, totalvotes, positiveRate }: VoteStatsProps) {
   return (
     <>
       <div className={styles.container}>
@@ -30,4 +30,4 @@ function VoteStatus({ votes, totalvotes, positiveRate }: VoteStatusProps) {
   );
 }
 
-export default VoteStatus;
+export default VoteStats;
